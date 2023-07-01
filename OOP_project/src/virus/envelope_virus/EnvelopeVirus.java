@@ -1,20 +1,23 @@
 package virus.envelope_virus;
 
+import component.Component;
 import virus.Virus;
-import virus.envelope_virus.envelope.Envelope;
 
 public class EnvelopeVirus extends Virus {
 	
-	private Envelope envelope;
+	private Component lipidBilayer;
+	
+	private Component glycoProtein;
 
-	public EnvelopeVirus(String acidNucleic, String capsid, Envelope envelope) {
+	public EnvelopeVirus(Component acidNucleic, Component capsid, Component lipidBilayer, Component glycoProtein) {
 		super(acidNucleic, capsid);
 		// TODO Auto-generated constructor stub
-		this. envelope = envelope;
+		this.lipidBilayer =lipidBilayer;
+		this.glycoProtein = glycoProtein;
 	}
 	
 	public String toString() {
-		return (super.toString() + envelope + "\n"  );
+		return (super.toString() + lipidBilayer + "\n" + glycoProtein + "\n"   );
 	}
 	
 }
